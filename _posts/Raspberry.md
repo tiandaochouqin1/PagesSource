@@ -502,3 +502,20 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # 内核移植
 [自行移植树莓派64位内核系统的方法介绍](https://shumeipai.nxez.com/2017/11/07/build-ubuntu-64-bit-system-on-raspberry-pi-by-yourself.html)
 [Kernel building - Official](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
+
+
+# 关闭指示灯
+
+https://www.cnblogs.com/rootming/p/12245502.html
+
+如果要每次开机生效, 可编辑/etc/rc.local文件
+
+
+
+```
+
+echo 0 | sudo tee  /sys/class/leds/led0/brightness
+echo none | sudo tee  /sys/class/leds/led0/trigger
+echo none | sudo tee  /sys/class/leds/led1/trigger
+echo 0 | sudo tee /sys/class/leds/led1/brightness
+```

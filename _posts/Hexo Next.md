@@ -79,8 +79,12 @@ hexo s无法预览。
 ## 文章中超链接跳转错误
 文章中超链接需填写完整：`https://www.domain.com`
 
+# 配置搜索功能
 
-# 搜索问题
+[Hexo 添加搜索](https://getiot.tech/hexo/hexo-search.html)
+npm install hexo-generator-searchdb --save
+
+# 搜索Loding问题
 按照[指南配置](https://github.com/theme-next/hexo-generator-searchdb)好search后无法使用，点击后一直在loading。
 添加的搜索功能无法使用，一直处于`Loading` 状态。
 

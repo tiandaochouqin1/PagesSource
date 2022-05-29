@@ -258,3 +258,5 @@ vi /etc/init.d/samba
 #       [ -n "$browseable" ] && echo -e "\tbrowseable = $browseable" >> /var/etc/smb.conf
 [ -n "$browseable" ] && echo -e "\tbrowseable = yes" >> /var/etc/smb.conf
 ```
+
+**安装samba插件（？），目前不需要上述操作了（手机显示全盘访问）。**

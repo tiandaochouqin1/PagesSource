@@ -200,6 +200,10 @@ netsh interface portproxy add v4tov4 listenaddress=192.168.193.1 listenport=22 c
 
 ```
 
+# 第三方文件浏览器
+
+1. https://www.onecommander.com/
+2. XYplorer https://masuit.com/1587?t=us4a91afgn40
 
 # QTTabBar
 [官网](http://qttabbar.wikidot.com/)，先安装1038版本，再安装1040更新包。

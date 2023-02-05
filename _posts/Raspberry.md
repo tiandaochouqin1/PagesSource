@@ -505,6 +505,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 
 
 # 关闭指示灯
+电源、状态指示灯
 
 https://www.cnblogs.com/rootming/p/12245502.html
 

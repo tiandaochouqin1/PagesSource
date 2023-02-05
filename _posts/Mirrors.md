@@ -155,7 +155,8 @@ https://www.wikiredia.com	桌面版：https://zh.wikiredia.com
 
 # Github
 
-油猴脚本 [Github 增强 - 高速下载](https://github.com/XIU2/UserScript)
+1. 油猴脚本 [Github 增强 - 高速下载](https://github.com/XIU2/UserScript)
+2. https://github.com/521xueweihan/GitHub520
 
 
 ## 镜像github加速

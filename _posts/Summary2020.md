@@ -567,9 +567,9 @@ g++: .c和.cpp均当作C++处理;自动链接
 编译工具链：Binutils、GCC、glibc。
 
 ## 浮点数
-
-
-https://www.wikiwand.com/zh/IEEE_754
+1. https://www.wikiwand.com/zh/IEEE_754
+2. `【算法】解析IEEE 754 标准 - HDWK - 博客园` <https://www.cnblogs.com/HDK2016/p/10506083.html>`__
+3. https://evanw.github.io/float-toy/
 
 `Value = sign * 2^E * M`
 

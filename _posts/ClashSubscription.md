@@ -623,7 +623,9 @@ cfw-profile-mixin:
 7. 有时需要重启浏览器才有网。
 
 
-# ClashShell
+
+# 常用工具
+## ClashShell
 
 https://github.com/juewuy/ShellClash
 
@@ -631,7 +633,29 @@ https://github.com/juewuy/ShellClash
 
 路由器也可以用：[在路由器上安装及使用ShellClash的教程](https://juewuy.github.io/post/clash-for-miwifi-an-zhuang-ji-shi-yong-jiao-cheng/)
 
-# docker clash
+## docker clash
 在docker中跑clash服务。
 
 https://fx.tmioe.com/820.html
+
+## 机场使用历史
+
+youqu-支持ipv6，hn地区可用率低
+
+mosu: 2020.5 - 2022.9跑路，年付60-180都用过
+
+kcssr: 2022.10-2023.2,一般，季付36
+
+泡芙云、cylink：使用过，价格贵，体验还可以
+
+### 2023记录
+1. https://duangks.com/ 比较良心
+2. https://www.duyaoss.com/ 都很贵
+
+
+xfss: 2023.2-, 延迟带宽优，10元120G。https://XFTLD.ORG https://XFLTD.TOP
+
+类似不限时机场：[比奇堡](https://duangks.com/archives/95/)、魔戒
+
+优质低流量机场：[花云](https://duangks.com/archives/76/)、[YTOO](https://duangks.com/archives/86/Z)、
+

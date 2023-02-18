@@ -266,3 +266,17 @@ VDM需要安装JRE8，为youtube-dl源。
 [项目地址](https://github.com/streamlink/streamlink)
 
 主要支持国外的视频网站。
+
+# 安卓客户端
+
+## vanced
+1. https://youtubevanced.com/ ; pc版 https://vancedapp.com/pc
+2. https://www.v2ex.com/t/824148
+
+MIUI 安装 vanced manager后 ，想安装 youtube advanced 被拦截。解决方法：
+
+1. 应用设置里找到应用包管理组件,卸载更新和删除数据,联网控制里禁用数据（重点）
+2. 开发者选项关闭 MIUI 优化(魔改安卓的选项）,安装后再打开(看别人说关了这个权限管理会乱掉)
+
+
+还要打开Vanced MicroG的自启动权限才能正常联网。

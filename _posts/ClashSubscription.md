@@ -52,13 +52,13 @@ date: 2020-03-29 17:49:28
 
 --- 
 
-
-# 地址
+# Clash订阅
+##  地址
 [Clash github](https://github.com/Dreamacro/clash)
 [Clash官方说明书](https://docs.cfw.lbyczf.com/)
 
 [各种代理软件教程合集](https://wiki.kache.moe/)
-## 其它项目地址
+### 其它项目地址
 
 [Subconvert](https://github.com/tindy2013/subconverter)
 运行 subconverter 主程序后，按照 调用说明 的对应内容替换即可得到一份使用神机规则的配置文件。
@@ -69,7 +69,7 @@ date: 2020-03-29 17:49:28
 [订阅转换API](https://limbopro.xyz/archives/subconverter.html)
 [SS/SSR/V2Ray订阅类型转换教程 | 万能API](https://merlinblog.xyz/wiki/api.html)
 
-# 规则与subconverter
+## 规则与subconverter
 
 
 subconverter使用的主要规则-[神机规则](https://github.com/ConnersHua/Profiles/tree/master)
@@ -83,7 +83,7 @@ subconverter使用的主要规则-[神机规则](https://github.com/ConnersHua/P
 [NobyDa](https://github.com/NobyDa/Script/tree/master/Surge)
   
 
-## 搭建好的api
+### 搭建好的api
 使用[项目](https://github.com/tindy2013/heroku-subconverter)在[Heroku](https://dashboard.heroku.com/apps)一键搭建的api（每次原项目更新需要重新部署）:
 https://subconverterapi.herokuapp.com/
 
@@ -96,7 +96,7 @@ https://api.10101.io/ #使用subconverter
 https://sub.dleris.best/  #这个使用的[lhie1](https://github.com/lhie1/Rules)规则屏蔽app广告不行,国内媒体不全
 
 
-## 简易用法
+### 简易用法
 `http://127.0.0.1:25500/sub?target=%TARGET%&url=%URL%&config=%CONFIG%`
 
 |调用参数|必要性|示例|解释|
@@ -106,7 +106,7 @@ https://sub.dleris.best/  #这个使用的[lhie1](https://github.com/lhie1/Rules
 |config|可选|https%3A%2F%2Fwww.xxx.com|指远程 pref.ini (包含分组和规则部分)，需要经过 URLEncode 处理，默认加载本地设置文件|
 
 
-## 我的配置
+### 我的配置
 默认未开启`运营商拦截`和`广告拦截`；部分或者全部已经被包含在`全球拦截`里。
 
 ```
@@ -146,7 +146,7 @@ https://sub.dleris.best/  #这个使用的[lhie1](https://github.com/lhie1/Rules
 
 ```
 
-## Provider
+### Provider
 使用subconverter需要加上`&list=true`参数，只获取节点。
 [Provider 说明](https://www.notion.so/Clash-Proxy-Provider-ff8d1955f6234ad3a779fecd3b3ea007)
 用于`只更新节点`。
@@ -219,19 +219,19 @@ Proxy Group:
       - DIRECT
 ```
 
-# 部署与使用
+## 部署与使用
 
-## 规则更新
+### 规则更新
 一些文件需要更新
 1. `pref.ini`
 2. `groups.txt`
 3. `rulesets.txt`
 4. `rename_node.txt`
 
-## 本地使用
+### 本地使用
 下载subconverter的Windows版[release](https://github.com/tindy2013/subconverter/releases)；运行；此时本地可调用`api`为`127.0.0.1:25500`。
 
-## 服务器部署
+### 服务器部署
 
 ```
 wget https://github.com/tindy2013/subconverter/releases/download/v0.4.4/subconverter_linux64.tar.gz
@@ -264,7 +264,7 @@ listen=127.0.0.1
 
 ```
 
-### Heroku容器部署
+#### Heroku容器部署
 快速部署到 Heroku： 
 https://github.com/tindy2013/heroku-subconverter
 http://subconverterapi.herokuapp.com/
@@ -274,7 +274,7 @@ http://subconverterapi.herokuapp.com/
 2. 修改 base 文件夹中的 pref 配置文件 (如更改 access_token 以及将 managed_config_prefix 修改为 Heroku 分配的域名)
 3. 访问 https://heroku.com/deploy?template=自己的仓库地址 输入 App name 点击 Deploy app 即可部署
 
-## 在服务器中配置规则
+### 在服务器中配置规则
 
 按照需求配置好后可直接更新订阅使用。同时`更新节点和规则`。
 关键配置文件见github仓库。
@@ -302,7 +302,7 @@ http://subconverterapi.herokuapp.com/
 `vi /home/subconverter/snippets/rename_node.txt`
 @符合前面为正则表达式，注意`[]`等特殊符号需要加`\`。@后面为文本字符。
 
-## 更新subconverter和新版clash
+### 更新subconverter和新版clash
 更新clash后提示需要使用新的profile（安卓2.1.5、windows 0.11.7），故将更新converter`0.5.1`to`0.6.3`。
 
 使用Beyond Compare比较两个版本的文件结构及内容：
@@ -310,19 +310,19 @@ http://subconverterapi.herokuapp.com/
 2. 只有`pref.ini`有内容的增减和改变，实践证明可以不关心这些改变；
 3. 其它关键自定义配置文件及其格式、语法未有变化。
 
-### 升级步骤
+#### 升级步骤
 1. `pref.ini`：更改默认的25500端口。
 2. `groups.txt`、`rulesets.txt`、`rename_node.txt`：`./snippsets`文件夹下，覆盖。
 3. `MyRules.list` :复制到与snipsets同文件夹。
 4. `pm2 delete subconverter&& pm2 start subconverter&&pm2 save`:删除老版，启动并保存新版。
 
-# 使用Provider
+## 使用Provider
 只更新`节点`。
 注意部分参数需要进行[URL ENCODE](https://www.urlencoder.org/)处理。
 [调用说明](https://github.com/tindy2013/subconverter/blob/master/README-cn.md#%E8%B0%83%E7%94%A8%E8%AF%B4%E6%98%8E)
 
 
-## 筛选节点
+### 筛选节点
 需要用到的参数有：
 `include筛选发生在rename_node之前`
 
@@ -388,7 +388,7 @@ Proxy Group:
       - DIRECT
 ```         
 
-## 进阶用法
+### 进阶用法
 
 |调用参数|必要性|示例|解释|
 |---|----|----|----|
@@ -414,8 +414,10 @@ Proxy Group:
 |interval|可选|43200|用于设置托管配置更新间隔，确定配置将更新多长时间，单位为秒|
 |strict|可选|true / false|如果设置为 true，则 Surge 将在上述间隔后要求强制更新|
 
-# 解锁服务
-## Netflix DNS解锁
+```
+
+## 解锁服务
+### Netflix DNS解锁
 [netflix-proxy](https://github.com/ab77/netflix-proxy)
 [利用Netflix-proxy配置解锁NetFlix](https://zhujiget.com/2420.html)
 需解锁的机器1的DNS（设置为机器2的ip）由可访问NF的机器2解析。
@@ -437,7 +439,7 @@ V2ray中可配置不同域名使用不同DNS。
 下载并安装扩展`Account pool`，扩展中点击接收并继续。
 [网站底部](https://tecknity.com/free-netflix-account-cookies/%EF%BC%89)提供cookies链接，进入显示Cookies的页面后在扩展中点击使用。
 
-## 解锁网易云
+### 解锁网易云
 `搭建的为http代理，需要手动加到clash的yml文件中。`？
 `手机app许清除缓存，且要等一会才会解析出来`
 
@@ -454,7 +456,7 @@ V2ray中可配置不同域名使用不同DNS。
 [衍生项目](https://github.com/nondanee/UnblockNeteaseMusic/issues/233)
 
 
-### 规则
+#### 规则
 `rules/ACL4SSR/Clash/Ruleset/NetEaseMusic.list`
 ```
 DOMAIN-SUFFIX,interface.music.163.com,网易云音乐
@@ -493,7 +495,7 @@ IP-CIDR,223.252.192.0/19,网易云音乐
 IP-CIDR,101.71.154.241/32,网易云音乐
 ```
 
-## Supervisor
+### Supervisor
 
 supervisor是一个Python开发的通用的进程管理程序，可以管理和监控Linux上面的进程，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。
 
@@ -518,7 +520,7 @@ autorestart=true
 systemctl start supervisord
 systemctl enable supervisord
 
-## Youtube 去广告
+### Youtube 去广告
 广告阻止不仅于使用 [Rule] 规则，有的广告需要 [URL Rewrite] 和 [MITM]
 会造成以下问题
 
@@ -529,21 +531,21 @@ systemctl enable supervisord
 `*.googlevideo.com`
 
 
-# 全局配置
+## 全局配置
 
 [浅谈在代理环境中的DNS解析行为](https://blog.skk.moe/post/what-happend-to-dns-in-proxy/)
 
-## 用Proxifer省心
+### 用Proxifer省心
 并且设置默认规则为走代理。这样才能代理`Xshell`。
 
-## UWP
+### UWP
 
 勾选`EXAMPT ALL`
 
 默认的情况下，UWP应用会被禁止使用回环地址（127.0.0.1）的代理，而CFW和ss-win均是本地代理，都是通过回环地址提供代理的。
 通过ss-win的处理方式可以知道，PAC分流会让系统放行直连流量，所以大部分不需要代理的UWP应用都可以在ss-win的全局PAC分流下使用。而CFW除了内置的几个cfw-bypass字段以外，所有流量都需要处理，这就使得几乎所有的`UWP在开启系统代理时都不可用`。
 
-## Tap
+### Tap
 
 ```
 Fndroid on Mar 6 • 
@@ -581,12 +583,17 @@ experimental:
 ***
 以非管理员身份运行Clash并正确配置网卡名称后可实现全局代理。
 
-## 混合配置（mixin）
+### 混合配置（mixin）
 版本要求:`0.9.5`版本更新后，支持向所有配置文件中注入`公共属性设置`
 
 例如：在配置文件中统一添加dns字段，操作如下：
 在 `config.yaml`中添加以下字段:
+
+
+
+
 ```
+
 cfw-profile-mixin: 
   experimental:
     interface-name: WLAN  
@@ -605,13 +612,16 @@ cfw-profile-mixin:
       - 'www.msftncsi.com'
       - 'www.msftconnecttest.com' 
       - 'd.docs.live.net' 
+
 ```
+
+
 
 在启动或切换配置时，上面内容将会替换到原有配置文件中进行覆盖。
 配置文件内容不会被修改，混合行为只会发生在`内存`中。
 可以通过`任务栏图标`菜单开关这个行为。
 
-# 目前存在的问题
+## 目前存在的问题
 从[项目issue](https://github.com/fndroid/clash_for_windows_pkg/issues/)来看，目前`tap的问题挺多`。
 1. 同时开启系统代理和tap会导致uwp应用网络连接失败。
 2. 节点全部timeout，但能够使用。
@@ -659,3 +669,4 @@ xfss: 2023.2-, 延迟带宽优，10元120G。https://XFTLD.ORG https://XFLTD.TOP
 
 优质低流量机场：[花云](https://duangks.com/archives/76/)、[YTOO](https://duangks.com/archives/86/Z)、
 
+大流量老机场：CordCloud(看起来专业)

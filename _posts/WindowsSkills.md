@@ -658,6 +658,12 @@ ww:	仅全字匹配.
 dc:<date>、datecreated:<date>    dc:last year
 dm:<date>、datemodified:<date>    dm:2015-2016
 
+# Fluent Search 
+https://fluentsearch.net/
+
+1. 模糊搜索、部分文件全文搜索、浏览器历史
+2. 类vi功能，解放鼠标
+
 # 硬盘选择
 
 

@@ -520,3 +520,35 @@ echo none | sudo tee  /sys/class/leds/led0/trigger
 echo none | sudo tee  /sys/class/leds/led1/trigger
 echo 0 | sudo tee /sys/class/leds/led1/brightness
 ```
+
+
+# 香橙派OrangePi
+1. http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-2.html
+2. [OrangePi_Zero2_H616_用户手册_v3.2](../files/OrangePi_Zero2_H616_用户手册_v3.2.pdf)
+
+
+## 启动与登录
+官方系统：默认 root 和 orangepi 用户的密码都为 orangepi 。64位的（`getconf LONG_BIT、file /bin/ls`）
+
+串口连接：3个独立的针脚。tx和rx需和反接（和树莓派一样）。
+
+网络连接：不能使用修改/etc/network/interfaces 方式
+
+```
+root@orangepi:~# nmcli dev wifi connect wifi_name password wifi_passwd
+Device 'wlan0' successfully activated with 'cf937f88-ca1e-4411-bb50-61f402eef293'.
+
+自动连接：
+nmcli connection modify wifi_name connection.autoconnect yes
+
+ls /etc/NetworkManager/system-connections/
+```
+
+## 内核编译
+1. 内核代码(？) https://github.com/orangepi-xunlong/orangepi-build
+
+
+## 查看cpu温度
+```
+ watch -n 0.1 echo CPU: $[$(cat /sys/class/thermal/thermal_zone0/temp)/1000]°
+```

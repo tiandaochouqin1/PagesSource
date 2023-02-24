@@ -24,11 +24,16 @@ categories: VPS
   - [临时邮箱](#临时邮箱)
   - [Yandex域名邮箱](#yandex域名邮箱)
     - [其它登录](#其它登录)
-# CheapName.com
+
+
+# 域名服务商
+## 腾讯云dnspod
+腾讯云轻量无忧每3个月赠送20无门槛域名续费券。轻量无忧计划 Lighthouse Care的活动页面地址是：https://cloud.tencent.com/act/lighthouse
+## CheapName.com
 
 `Domain List->manage->Advance DNS->Host Records`
 
-# Freenom免费域名
+## Freenom免费域名
 [Freenom](https://my.freenom.com/domains.php)唯一一个提供免费顶级域名的商家,包括.ml/.tk/.ga/.cf/.gq后缀。
 到期前14天填可续期，每次最长12 month。
 下单时ip需和资料中的国家一致，否则出现`技术性错误，域名注册失败`。

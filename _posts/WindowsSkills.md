@@ -594,6 +594,10 @@ windows defender：必须在卡巴斯基未启动时操作！！！
 
 ```
 
+
+## onedrive 提示电池优化设置和省电模式无法登陆
+需打开微软验证器Authenticator的自启动。
+
 # WPS
 版本分类乱；收费方式复杂。
 

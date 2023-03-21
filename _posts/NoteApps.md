@@ -63,7 +63,13 @@ categories: 其它
 
 可自己部署docker服务端,保存微信推文仍然需要另购许可。
 
-可破解http://www.zhanghaobk.com/archives/docker-da-jian-wei-zhi-bi-ji--bing-po-jie-vip 
+1. `为知笔记 | 为知笔记服务端docker镜像使用说明  <https://www.wiz.cn/zh-cn/docker>`__
+2. `为知笔记 | Docker 服务端私有部署 - 收藏服务设置说明  <https://www.wiz.cn/zh-cn/docker-collector-service>`__
+   原理：private server的可访问地址 + private 的收藏token填入到绑定微信公众号的官方账号中
+
+server 许可可破解 http://www.zhanghaobk.com/archives/docker-da-jian-wei-zhi-bi-ji--bing-po-jie-vip 
+
+可发布到博客(cnblog、csdn、wordpress) https://www.wiz.cn/wiz-plugin-blog-writter.html
 
 **- OneNote**
 强在批注、整理、手写与编辑，弱在编辑阅读开关与管理，定位：草稿型OCR整理软件

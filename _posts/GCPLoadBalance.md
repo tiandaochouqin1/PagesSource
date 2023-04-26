@@ -128,8 +128,12 @@ Billing Account (第三步图1右上角）Manage, 为这个Billing Account改个
 登陆需要续费的Google云服务器，点击Billing, 我们可以看到提示：你有多个Billing Account 
 选择Billing>>Account Management  点开My first Project后面的三个小点点，选择Change billing
 
+`修改GCP用户密码并开启root登录 - 腾讯云开发者社区-腾讯云  <https://cloud.tencent.com/developer/article/1544696>`__
 
 1. 开启root ssh
 2. 固定Ip
+3. 打开防火墙
+
+预计操作耗时30min
 
 

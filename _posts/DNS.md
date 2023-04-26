@@ -33,6 +33,17 @@ categories: VPS
 
 `Domain List->manage->Advance DNS->Host Records`
 
+## 国内域名备案
+需要在网站首页展示备案信息。
+
+在html底部新增copyright行
+
+```
+<div class="copyright">
+    <a href="https://beian.miit.gov.cn/" class="post-title-link" itemprop="url">备案号：********</a>
+</div>
+
+```
 ## Freenom免费域名
 [Freenom](https://my.freenom.com/domains.php)唯一一个提供免费顶级域名的商家,包括.ml/.tk/.ga/.cf/.gq后缀。
 到期前14天填可续期，每次最长12 month。

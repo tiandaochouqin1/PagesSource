@@ -169,6 +169,16 @@ Windows Registry Editor Version 5.00
 1. 更改所有者。高级安全设置-添加用户，勾选两个继承选项。
 2. 设置权限。高级安全设置-勾选继承选项
 
+# 找不到该项目
+Windows10系统删除文件夹“找不到该项目”强删方法
+
+新建del.bat文件，内容如下。将文件夹拖到del.bat上即可删除。
+
+```
+DEL /F /A /Q \\?\%1
+RD /S /Q \\?\%1
+```
+
 # Windows10 关闭UAC
 [UAC](https://docs.microsoft.com/zh-cn/windows/security/identity-protection/user-account-control/user-account-control-group-policy-and-registry-key-settings)
 ## 彻底关闭

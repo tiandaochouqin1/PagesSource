@@ -260,3 +260,47 @@ vi /etc/init.d/samba
 ```
 
 **安装samba插件（？），目前不需要上述操作了（手机显示全盘访问）。**
+
+
+# ax1800 pro
+
+## ttl开启uboot tftp
+
+1. 拆机，接串口，
+2. 进入uboot：开机后立即在串口按enter
+3. 连接电脑网口：uboot自身ip为192.168.10.10，电脑设置为同网段Ip
+4. 电脑端运行tftpd64 服务端
+5. 此时即可在路由器使用tftp工具
+
+
+### 输入uboot
+开启tftp服务后：
+
+```
+tftpboot u-boot.mbn && flash 0:APPSBL && flash 0:APPSBL_1 。
+```
+
+### 刷入固件
+   
+1. 刷入uboot之后，复位路由器重新进入uboot。
+2. 开启固件更新的httpd服务：httpd 192.168.1.1
+3. 电脑设置为同网段，然后访问192.168.1.1，即可刷入 原厂固件或openwrt factory固件
+固件
+
+### 备份与恢复分区：
+1. 通过ssh：使用dd命令即可
+2. 通过ttl（tftp）：mmc命令备份，然后合并分区得到rootfs和image；使用tftpboot恢复。
+
+## istoreOS固件
+1. 不支持ipv6。尝试各种配置一直不成功；
+2. 刷了官方固件，发现应用商店里面好多工具无法安装（缺少各种依赖，而openwrt官网已经没有了对ipq6xxx的软件包，以前应该是有的）。docker也安装不起来
+
+## 开启ssh
+1. 刷入老版本固件：
+2. 网页登陆后台,f12执行脚本。每次都需要这么操作。
+
+## 刷机后app离线
+
+1. 更改WiFi名为JDCwifi_xxxx
+2. 连接WiFi，app右上角重新绑定
+3. 可能需要最新固件

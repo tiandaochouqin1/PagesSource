@@ -131,7 +131,7 @@ apt install fail2ban
 
 systemctl enable fail2ban
 
-vi /etc/fail2ban/jail.local
+vi /etc/fail2ban/jail.local 新增配置
 
 ```
 [DEFAULT]
@@ -157,6 +157,8 @@ action = iptables[name=SSH, port=ssh, protocol=tcp]
 sendmail-whois[name=SSH, dest=my@gmail.com, sender=fail2ban@email.com]
 
 ```
+
+然后： fail2ban-client reload
 
 常用命令
 
